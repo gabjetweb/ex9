@@ -2,26 +2,29 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Mon Application</title>
+  <title>jettegabriel - exercice 09</title>
 </head>
 <body>
-  Node.js, Express et MongoDB.
-  <button id='update'>Mise à jour téléphone</button>
+  <h1>jettegabriel - exercice 09</h1>
     <form action="/adresse" method="POST">
-    <input type="text" placeholder="nom" name="nom">
-    <input type="text" placeholder="Telephone" name="telephone">
-    <button type="submit">Submit</button>
+    <input type="text" placeholder="Nom" name="nom"></br>
+    <input type="text" placeholder="Prénom" name="prenom"></br>
+    <input type="text" placeholder="Telephone" name="telephone"></br>
+    <input type="text" placeholder="Code postal" name="codePostal"></br>
+    <button type="submit">Soumettre</button>
   </form>
 
   <ul class="adresse">
   <% for(var i=0; i<adresse.length; i++) {%>
     <li class="client">
-      <span><%= adresse[i].nom %></span>
-      <span><%= adresse[i].telephone %></span>
-    </li>
+      <span>Nom : <%= adresse[i].nom %></span></br>
+      <span>Prénom :<%= adresse[i].prenom %></span></br>
+      <span>Téléphone : <%= adresse[i].telephone %></span></br>
+      <span>Code Postal : <%= adresse[i].codePostal %></span>
+    </li></br>
   <% } %>
   </ul>
-  <script type="text/javascript" src="modifier_adresse.js"></script>
+  <script type="text/javascript" src="serveur.js"></script>
 
 </body>
 </html>

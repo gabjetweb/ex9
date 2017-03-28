@@ -27,11 +27,6 @@ app.get('/',  (req, res) => {
     }) 
 })
 
-app.get('/formulaire',  (req, res) => {
-   console.log('la route  get / = ' + req.url)
-   res.sendFile(__dirname + "/public/html/forme.htm")
-})
-
 app.post('/adresse',  (req, res) => {
   db.collection('adresse').save(req.body, (err, result) => {
       if (err) return console.log(err)
